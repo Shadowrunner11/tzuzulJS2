@@ -1,37 +1,39 @@
-import { createGrid } from "./functions/createGrid.js"
-import { $ } from "./functions/selectors.js"
-import { KEY } from "../.config.js"
-const qrs= new URLSearchParams()
-qrs.append("key", KEY)
+import { createGrid } from "./functions/createGrid";
+import { $ } from "./functions/selectors";
+import { KEY } from "../.config";
 
-fetch('https://pixabay.com/api/videos/?' + qrs).then(res=>res.json()).then(data=>{
+const qrs = new URLSearchParams();
+qrs.append("key", KEY);
 
-    createGrid(data.hits)
+fetch(`https://pixabay.com/api/videos/?${qrs}`).then((res) => res.json()).then((data) => {
+  createGrid(data.hits);
 
-    $('main > section').addEventListener('mouseenter', event =>{
-        console.log(event.target)
-        if(event.target.src){
-            try{
+  $("main > section").addEventListener("mouseenter", (event) => {
+    if (event.target.src) {
+      event.target.play();
+    }
+  }, true);
 
-                event.target.play()
-            }catch{}
-
-        }
-    },true)
-    
-    $('main > section').addEventListener('mouseout', event =>{
-        if(event.target.src){
-            try{
-
-                event.target.pause()
-                event.target.currentTime = 0
-            }catch{
-                
-            }
-        }
-    },true)
-    /* const [videoInfo] = data?.hits
+  $("main > section").addEventListener("mouseout", (event) => {
+    if (event.target.src) {
+        event.target.pause();
+        event.target.currentTime = 0;
+    }
+  }, true);
+  /* const [videoInfo] = data?.hits
     const videoElement  = $("video[data-id='video']")
     videoElement.load()
     videoElement.setAttribute("src", videoInfo.videos.small.url) */
-})
+});
+
+const audioElement = $("#audio");
+
+$("#inputSlide").addEventListener("click", event=>{
+    const slidePart = event.target.value;
+    console.log(slidePart);
+    audioElement.currentTime = audioElement.duration*slidePart/100;
+});
+
+$("#play").addEventListener("click", ()=>{
+    audioElement.play();
+});

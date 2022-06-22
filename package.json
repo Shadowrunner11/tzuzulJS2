@@ -7,10 +7,13 @@
   "devDependencies": {
     "dotenv": "^16.0.1",
     "esbuild": "^0.14.47",
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.2",
     "lite-server": "^2.6.1"
   },
   "scripts": {
-    "dev:build": "esbuild ./js/index.js --bundle --minify --outfile=./build/main.js",
-    "dev":"yarn dev:build && lite-server"
+    "dev:build": "esbuild ./js/index.js --bundle --minify --watch --outfile=./build/main.js",
+    "dev": "lite-server"
   }
 }
