@@ -1,0 +1,16 @@
+{
+  "name": "adreina",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Shadowrunner11 <matematicadivina1@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "dotenv": "^16.0.1",
+    "esbuild": "^0.14.47",
+    "lite-server": "^2.6.1"
+  },
+  "scripts": {
+    "dev:build": "esbuild ./js/index.js --bundle --minify --outfile=./build/main.js",
+    "dev":"yarn dev:build && lite-server"
+  }
+}
