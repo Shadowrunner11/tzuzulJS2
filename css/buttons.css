@@ -2,3 +2,22 @@ button{
     background-color: transparent ;
     border: none;
 }
+
+.video-buttons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    background-color: rgba(128, 128, 128, 0.342);
+    bottom: 3px;
+    z-index: 2;
+    justify-content: center;
+    padding: calc(1.5*var(--small));
+}
+
+
+.video-contro-buttons{
+    column-gap: calc(2*var(--small));
+}
+
+
+

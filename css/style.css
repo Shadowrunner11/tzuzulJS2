@@ -1,6 +1,26 @@
 @import url('./vars.css');
 @import url('./reset.css');
 @import url('./buttons.css');
+@import url('./spiner.css');
+
+section{
+    margin: calc(4*var(--small));
+}
+
+.iconify {
+    font-size: var(--large);
+    color: #ffff;
+
+}
+
+video{
+    max-height: 60vh;
+    width: 95vw;
+}
+
+.hidden{
+    display: none;
+}
 
 header{
     padding: var(--small);
@@ -13,6 +33,10 @@ body{
 
 .flex{
     display: flex;
+}
+
+.flex-column{
+    flex-direction: column;
 }
 
 .flex-even{
@@ -48,7 +72,7 @@ body{
 
 .search{
     background-color: rgb(200,200,225, 0.5);
-    border: var(--dark);
+    border: solid var(--dark) 2px;
     height: 50%;
     margin: var(--small);
     min-width: 500px;
@@ -58,4 +82,14 @@ body{
 
 .flex-center{
     align-items: center;
+    justify-content: center;
 }
+
+.video-container{
+    min-height: 50vh;
+    border: solid 3px var(--dark);
+    margin-bottom: calc(4*var(--small));
+    
+    
+}
+
