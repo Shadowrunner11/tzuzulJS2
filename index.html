@@ -11,10 +11,17 @@
     <div id="wrapper">
         <header class="flex flex-even">
             <span>
-                <img class="square-medium" src="./assets/play-button-video-player-svgrepo-com.svg" alt="logo empresa andreina">
+                <img class="square-medium" src="./assets/log.svg" alt="logo empresa">
             </span>
-            <span>
-                <input type="text" placeholder="Buscar" data-input="search">
+            <nav>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </nav>
+            <span class="flex flex-center">
+                <input class="search soft-border-small" type="text" placeholder="Buscar" data-input="search">
                 <button data-button="search">
                     <img class="square-small" src="./assets/search-svgrepo-com.svg" alt="search" >
                 </button>
@@ -25,12 +32,12 @@
             <section class="video-section grid">
                 
             </section>
-            <section>
-                <audio id="audio" src="./assets/Mecano - Me Colé en una Fiesta.mp3"></audio>
-                <input id="inputSlide" type="range">
+            <!-- <section>
+                <audio id="audio" src="./assets/Shakira - Suerte (Whenever, Wherever) (1).mp3"></audio>
+                <input id="inputSlide" type="range" value="0">
                 <button id="play"><img class="square-small" src="./assets/play-button-svgrepo-com.svg" alt="search" ></button>
-                <button id="stop"></button>
-            </section>
+                <button id="stop"><img class="square-small" src="./assets/video-pause-button-svgrepo-com.svg" alt="search" ></button>
+            </section> -->
         </main>
 
     </div>
@@ -38,5 +45,5 @@
     <video data-id="video"  controls>
     </video> -->
 </body>
-<script src="./build/main.js" type="module"></script>
+<script src="./js/index.js" type="module"></script>
 </html>

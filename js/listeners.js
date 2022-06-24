@@ -1,4 +1,4 @@
-import { KEY } from "../.config.js";
+import { KEY } from "../a.config.js";
 import { $ } from "./functions/selectors.js";
 
 const qrs= new URLSearchParams();

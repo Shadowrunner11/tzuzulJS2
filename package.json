@@ -4,6 +4,7 @@
   "main": "index.js",
   "author": "Shadowrunner11 <matematicadivina1@gmail.com>",
   "license": "MIT",
+  "type": "module",
   "devDependencies": {
     "dotenv": "^16.0.1",
     "esbuild": "^0.14.47",
@@ -13,7 +14,7 @@
     "lite-server": "^2.6.1"
   },
   "scripts": {
-    "dev:build": "esbuild ./js/index.js --bundle --minify --watch --outfile=./build/main.js",
+    "dev:build": "node ./scripts/config.js",
     "dev": "lite-server"
   }
 }

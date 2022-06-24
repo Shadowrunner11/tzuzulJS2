@@ -1,6 +1,6 @@
-import { createGrid } from "./functions/createGrid";
-import { $ } from "./functions/selectors";
-import { KEY } from "../.config";
+import { createGrid } from "./functions/createGrid.js";
+import { $ } from "./functions/selectors.js";
+import { KEY } from "../a.config.js";
 
 const qrs = new URLSearchParams();
 qrs.append("key", KEY);
@@ -26,14 +26,14 @@ fetch(`https://pixabay.com/api/videos/?${qrs}`).then((res) => res.json()).then((
     videoElement.setAttribute("src", videoInfo.videos.small.url) */
 });
 
-const audioElement = $("#audio");
+/* const audioElement = $("#audio"); */
 
-$("#inputSlide").addEventListener("click", event=>{
+/* $("#inputSlide").addEventListener("click", event=>{
     const slidePart = event.target.value;
     console.log(slidePart);
     audioElement.currentTime = audioElement.duration*slidePart/100;
-});
+}); */
 
-$("#play").addEventListener("click", ()=>{
+/* $("#play").addEventListener("click", ()=>{
     audioElement.play();
-});
+}); */

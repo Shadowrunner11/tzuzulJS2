@@ -1,3 +1,5 @@
 :root{
-    --small:16px
+    --small:16px;
+    --light:#288AA5;
+    --dark:#022937;
 }
